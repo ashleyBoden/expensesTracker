@@ -1,5 +1,8 @@
+body { 
+    background-color: hsl(27, 66%, 92%);
+}
+
 .bar {
-    width: 50px;
     background-color: hsl(10, 79%, 65%);
     margin: 0 5px;
     display: inline-block;
@@ -13,7 +16,6 @@
     margin: 0 5px;
     display: inline-block;
     margin-top: 20px;
-    width: 50px;
     border-radius: 5px;
 }
 
@@ -47,29 +49,106 @@
 }
 
 .container {
-    max-width: 450px;
+    max-width: 475px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     font-family: 'DM Sans', sans-serif;
     width: 100%;
     border-radius: 10px;
     border: 1px solid hsl(27, 66%, 92%);
+    position: relative;
 }
 
 .chart-header {
     background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
     color: hsl(33, 100%, 98%);
-    height: 60px;
+    height: 75px;
+    padding: 5px;
+    line-height: 0.35rem;
+    justify-content: center;
+}
 
+img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-top: 15px;
+    right: 50px;
+    top: 25px;
 }
 
 .chart-header > #balance-label {
     font-size: 0.75rem;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 .chart-header > #balance-amount {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: 15px;
 }
+
+#chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: hsl(25, 47%, 15%);
+}
+
+hr {
+    opacity: 0.8;
+}
+
+.chart-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.35rem;
+}
+
+#total-header {
+    font-size: 0.75rem;
+    color: hsla(25, 47%, 15%, 0.472);
+    flex: 1;
+}
+
+#weekly-total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsl(25, 47%, 15%);
+    flex: 1;
+}
+
+.percent {
+    font-size: 0.75rem;
+    color: hsl(25, 47%, 15%);
+    text-align: right;
+    margin-top: 20px;
+}
+
+#monthly-percent {
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+.chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: hsla(25, 47%, 15%, 0.472);
+}
+

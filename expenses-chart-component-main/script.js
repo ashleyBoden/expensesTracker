@@ -1,11 +1,24 @@
+let total = 0;
+let numberOfBars = 0;
+let chartWidth = document.querySelector('.chart-bars').offsetWidth;
+
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
+
+        const numberOfBars = data.length;
+        const values = data.map((item) => item.amount);
+        const maxValue = Math.max(...values);
+
+        console.log(chartWidth, numberOfBars, ((chartWidth / numberOfBars) - 10))
+        console.log(document.querySelector('.chart-bars').offsetWidth)
+
         data.forEach(item => {
 
-            const values = data.map((item) => item.amount);
-            const maxValue = Math.max(...values);
 
+            total = total + item.amount;
+        
+            document.getElementById('weekly-total').textContent = '$' + total;
 
             var barWrapper = document.createElement('div');
             barWrapper.classList.add('bar-wrapper');
@@ -16,6 +29,7 @@ fetch('data.json')
                 bar.classList.add('max-bar');
             }            
             bar.style.height = item.amount * 2 + 'px';
+            bar.style.width = ((chartWidth / numberOfBars) - 10) + 'px';
             bar.classList.add('bar');
 
             var dayLabel = document.createElement('p');

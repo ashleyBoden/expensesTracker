@@ -13,20 +13,30 @@
 
   <div class="container">
     <div class="chart-header">
-      <p id="balance-label">My balance</p>
-      <p id="balance-amount">$921.48</p>
+      <p id="balance-label" grid-area="label">My balance</p>
+      <p id="balance-amount" grid-area="amount">$921.48</p>
+      <img src="./images/logo.svg" alt="logo" id="logo" grid-area="image">
     </div>
     
     <div class="chart">
-      <p>Spending - Last 7 days</p>
+      <p id="chart-title">Spending - Last 7 days</p>
     
       <div class="chart-bars"></div>
-    
-      <p id="total-header">Total this week</p>
-      <p id="monthly-total"></p>
-    
-      <p id="monthly-percent">+2.4%</p>
-      <p id="change-label">from last month</p>
+
+      <hr>
+
+      <div class="chart-footer">
+        <div class="total-container">
+          <p id="total-header">Total this week</p>
+          <p id="weekly-total"></p>
+        </div>
+        
+        <div class="percent">
+          <p id="monthly-percent">+2.4%</p>
+          <p id="change-label">from last month</p>
+        </div>        
+      </div>
+      
     </div>
   </div>
 
